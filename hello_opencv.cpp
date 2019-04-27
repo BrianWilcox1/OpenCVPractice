@@ -14,8 +14,7 @@ int main(int argc, char** argv){
 		return -1;
 	}
 
-	cv::namedWindow("Test Image", cv::WINDOW_AUTOSIZE);
-	cv::imshow("Test Image", image);
+	cv::imwrite("test_image.jpg", image);
 
 	cv::waitKey(0);
 
