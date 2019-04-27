@@ -21,3 +21,9 @@ cv::Mat ImageOperations::normalizeToGrayscale(const cv::Mat& image){
     image.convertTo(res, CV_8U, scale, -minVal*scale);
     return res;
 }
+
+cv::Mat ImageOperations::blendImages(const cv::Mat& image1, const cv::Mat& image2, const double alpha){
+    cv::Mat res;
+    cv::addWeighted(image1, alpha, image2, (1.0-alpha), 0.0, res);
+    return res;
+}

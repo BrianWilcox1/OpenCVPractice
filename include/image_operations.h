@@ -7,4 +7,5 @@ class ImageOperations{
         cv::Mat grayscale(const cv::Mat& image, const int conversion_type);
         cv::Mat sobel(const cv::Mat& image, const int conv_type, const int dx, const int dy);
         cv::Mat normalizeToGrayscale(const cv::Mat& image);
+        cv::Mat blendImages(const cv::Mat& image1, const cv::Mat& image2, const double alpha);
 };
