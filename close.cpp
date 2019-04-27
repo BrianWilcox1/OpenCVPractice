@@ -32,7 +32,7 @@ int main(int argc, char** argv){
     auto dilated_output = morph_ops.dilation(image, dilation_type, dilation_size);
     auto closed_output = morph_ops.erosion(dilated_output, erosion_type, erosion_size); 
     
-	cv::imwrite("closed_image.jpg", closed_output);
-
-	return 0; 	
+    cv::imwrite("closed_image.jpg", closed_output);
+    
+    return 0; 	
 }	
