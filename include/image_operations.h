@@ -8,4 +8,5 @@ class ImageOperations{
         cv::Mat sobel(const cv::Mat& image, const int conv_type, const int dx, const int dy);
         cv::Mat normalizeToGrayscale(const cv::Mat& image);
         cv::Mat blendImages(const cv::Mat& image1, const cv::Mat& image2, const double alpha);
+        cv::Mat discreteFT(const cv::Mat& image, const int conv_type);
 };
