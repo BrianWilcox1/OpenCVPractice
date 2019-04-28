@@ -77,6 +77,5 @@ cv::Mat ImageOperations::discreteFT(const cv::Mat& image, const int conv_type){
     temp.copyTo(q2);
     
     cv::normalize(mag, mag, 0, 255, cv::NORM_MINMAX);
-    std::cout << mag << std::endl;
     return mag;
 }
