@@ -11,5 +11,5 @@ include_directories(${OpenCV_INLCUDE_DIRS} include)
 add_library(image_ops SHARED src/image_operations.cpp)
 target_link_libraries(image_ops ${OpenCV_LIBS})
 
-add_executable(dft examples/dft.cpp)
+add_executable(dft examples/core/dft.cpp)
 target_link_libraries(dft ${OpenCV_LIBS} image_ops)
