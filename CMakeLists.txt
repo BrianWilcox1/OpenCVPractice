@@ -8,8 +8,8 @@ set(CMAKE_CXX_STANDARD_REQUIRED TRUE)
 find_package(OpenCV REQUIRED)
 include_directories(${OpenCV_INLCUDE_DIRS} include)
 
-add_library(image_ops SHARED src/image_operations.cpp)
-target_link_libraries(image_ops ${OpenCV_LIBS})
+add_library(draw_ops SHARED src/drawing.cpp)
+target_link_libraries(draw_ops ${OpenCV_LIBS})
 
-add_executable(dft examples/core/dft.cpp)
-target_link_libraries(dft ${OpenCV_LIBS} image_ops)
+add_executable(draw examples/imgproc/draw.cpp)
+target_link_libraries(draw ${OpenCV_LIBS} draw_ops)
